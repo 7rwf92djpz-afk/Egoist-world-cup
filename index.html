@@ -9,9 +9,7 @@
   *{box-sizing:border-box;margin:0;padding:0}
   body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:radial-gradient(1200px 600px at 50% -10%,#16307a 0%,var(--bg) 60%) fixed;color:var(--text);min-height:100vh;line-height:1.5}
   header{text-align:center;padding:64px 20px 24px}
-  .ball{margin-bottom:14px;filter:drop-shadow(0 10px 24px rgba(39,225,255,.45));animation:bounce 1.6s ease-in-out infinite}
-  @keyframes bounce{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-14px) rotate(180deg)}}
-  @media(prefers-reduced-motion:reduce){.ball{animation:none}}
+  .banner{display:block;width:100%;max-width:640px;margin:0 auto 22px;border-radius:18px;border:1px solid #1d2d63;box-shadow:0 20px 60px rgba(39,225,255,.25)}
   .tag{display:inline-block;padding:6px 14px;border:1px solid var(--cyan);color:var(--cyan);border-radius:999px;font-size:.8rem;letter-spacing:.15em;text-transform:uppercase}
   h1{font-size:clamp(2.2rem,7vw,4.2rem);margin:18px 0 10px;font-weight:900;letter-spacing:-.02em;text-transform:uppercase;background:linear-gradient(90deg,#fff,var(--cyan),var(--blue));-webkit-background-clip:text;background-clip:text;color:transparent}
   header p{color:var(--muted);max-width:560px;margin:0 auto}
@@ -43,32 +41,7 @@
 </head>
 <body>
 <header>
-  <svg class="ball" viewBox="0 0 100 100" width="110" height="110" role="img" aria-label="Ballon de football">
-    <defs>
-      <clipPath id="c"><circle cx="50" cy="50" r="46"/></clipPath>
-      <radialGradient id="g" cx="35%" cy="30%" r="80%">
-        <stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#c9d6ff"/>
-      </radialGradient>
-      <polygon id="p" points="0,-10 9.5,-3.1 5.9,8.1 -5.9,8.1 -9.5,-3.1"/>
-    </defs>
-    <circle cx="50" cy="50" r="46" fill="url(#g)"/>
-    <g clip-path="url(#c)" fill="#0b1b4d" stroke="#0b1b4d" stroke-width="1.2" stroke-linejoin="round">
-      <polygon points="50,32 67.1,44.4 60.6,64.6 39.4,64.6 32.9,44.4"/>
-      <g fill="none" stroke-linecap="round">
-        <line x1="50" y1="32" x2="50" y2="14"/>
-        <line x1="67.1" y1="44.4" x2="84.2" y2="38.9"/>
-        <line x1="60.6" y1="64.6" x2="71.2" y2="79.1"/>
-        <line x1="39.4" y1="64.6" x2="28.8" y2="79.1"/>
-        <line x1="32.9" y1="44.4" x2="15.8" y2="38.9"/>
-      </g>
-      <use href="#p" transform="translate(75.9 14.4) rotate(36)"/>
-      <use href="#p" transform="translate(91.8 63.6) rotate(108)"/>
-      <use href="#p" transform="translate(50 94) rotate(180)"/>
-      <use href="#p" transform="translate(8.2 63.6) rotate(252)"/>
-      <use href="#p" transform="translate(24.1 14.4) rotate(324)"/>
-    </g>
-    <circle cx="50" cy="50" r="46" fill="none" stroke="#27e1ff" stroke-width="2"/>
-  </svg><br>
+  <img class="banner" src="banniere.png" alt="Bannière du tournoi">
   <span class="tag">Tournoi communautaire</span>
   <h1>World Cup<br>Blue Lock Rivals</h1>
   <p>Inscris-toi pour participer à la Coupe du Monde. Remplis le formulaire avec ton pseudo Discord : on te contactera là-bas.</p>
